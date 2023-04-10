@@ -4,10 +4,45 @@ body {
   background-color: #f7f7f7;
 }
 
+.header1 {
+  background-color: #333;
+  height: 60px;
+  padding-bottom: 5px;
+}
+
+.nav-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-ul-li {
+  margin-right: 20px;
+}
+
+.nav-a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 60px;
+}
+
+.nav-a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.search-box {
+  margin-left: auto;
+  align-items: center;
+}
+
 .header {
   background-color: #222222;
   height: 130px;
-  padding: 16px 0 0 0;
+  padding: 36px 0 0 0;
 }
 
 .header-emoji {

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flask Auth Example</title>
+    <link rel="stylesheet" href="./../static/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Analytics </a></li>
+          <li><a href="predict">Prediction</a></li>
+          <li class="search-box">
+            <a href="/logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="form-content">
+      <form method="POST" action="/predict">
+        <div class="container">
+          <div class="field grid-item">
+            <label for="store">Store:</label>
+            <select id="store" name="store" required>
+              <option value="" disabled selected>--Select Store--</option>
+              {%for store in stores %}
+              <option value="{{store}}">{{store}}</option>
+              {%endfor%}
+            </select>
+          </div>
+          <div class="field grid-item">
+            <label for="dept">Department:</label>
+            <div class="select-field">
+              <select id="dept" name="dept">
+                <option value="" disabled selected>
+                  --Select departement--
+                </option>
+                {%for dep in dept %}
+                <option value="{{dep}}">{{dep}}</option>
+                {%endfor%}
+              </select>
+            </div>
+          </div>
+
+          <div class="field grid-item">
+            <label for="temp">Temperature </label>
+            <input name="temp" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="fuelPrice">Fuil Price </label>
+            <input name="fuilPrice" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="markd1">Markdown 1 </label>
+            <input name="markd1" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="markd2">Markdown 2 </label>
+            <input name="markd2" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="markd3">Markdown 3 </label>
+            <input name="markd3" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="markd4">Markdown 4 </label>
+            <input name="markd4" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="markd5">Markdown 5 </label>
+            <input name="markd5" type="number" />
+          </div>
+          <div class="field" class="grid-item">
+            <label for="cpi">CPI </label>
+            <input name="cpi" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="unemployment">UnEmployment </label>
+            <input name="unemployment" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="size">Size </label>
+            <input name="size" type="number" />
+          </div>
+          <div class="field grid-item">
+            <label for="month">Month:</label>
+            <div class="select-field">
+              <select id="month" name="month">
+                <option value="" disabled selected>--Select month--</option>
+                {%for i in range(0,12) %}
+                <option value="{{month_no[i]}}">{{month_name[i]}}</option>
+                {%endfor%}
+              </select>
+            </div>
+          </div>
+          <div class="field grid-item">
+            <label for="year">Year:</label>
+            <div class="select-field">
+              <select id="year" name="year">
+                <option value="" disabled selected>--Select year--</option>
+                {%for year in range(2010,2030) %}
+                <option value="{{year}}">{{year}}</option>
+                {%endfor%}
+              </select>
+            </div>
+          </div>
+          <div class="field grid-item">
+            <label for="type">Type:</label>
+            <div class="select-field">
+              <select id="type" name="type">
+                <option value="" disabled selected>
+                  --Select Store type--
+                </option>
+                {%for type in type %}
+                <option value="{{type}}">{{type}}</option>
+                {%endfor%}
+              </select>
+            </div>
+          </div>
+          <div class="field grid-item">
+            <label for="holiday">Holiday:</label>
+            <div class="select-field">
+              <select id="holiday" name="holiday">
+                <option value="" disabled selected>--Holiday?--</option>
+                {%for holday in holiday %}
+                <option value="{{holday}}">{{holday}}</option>
+                {%endfor%}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="submit">Get Sales Prediction</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

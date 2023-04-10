@@ -26,6 +26,64 @@ title = "Walmart Analytics: Understand the sales!"
 
 layout = html.Div( 
     children=[
+        html.Header(
+            children=[
+                html.Nav(
+                    children=[
+                        html.Ul(
+                            children=[
+                                html.Li(
+                                    children=[
+                                        html.A(
+                                            children=("Home"),
+                                            className="nav-a",
+                                            href='/',
+                                        )
+                                    ],
+                                    className="nav-ul-li",
+                                ),
+                                html.Li(
+                                    children=[
+                                        html.A(
+                                            children=("Analytics"),
+                                            className="nav-a",
+                                            href='/dashboard',
+                                        ),
+                                        
+                                    ],
+                                    className="nav-ul-li",
+                                ),
+                                html.Li(
+                                    children=[
+                                        html.A(
+                                            children=("Prediction"),
+                                            className="nav-a",
+                                            href='/predict',
+                                        ),
+                                        
+                                    ],
+                                    className="nav-ul-li",
+                                ),
+                                html.Li(
+                                    children=[
+                                        html.A(
+                                            children=("Logout"),
+                                            className="nav-a",
+                                            href='/logout',
+                                        ),
+   
+                                    ],
+                                    className="nav-ul-li search-box",
+
+                                ),
+                            ],
+                            className="nav-ul"
+                        )
+                    ],
+                )
+            ],
+            className="header1",
+        ),
         html.Div(
             children=[
                 html.H1(

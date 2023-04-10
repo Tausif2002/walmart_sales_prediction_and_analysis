@@ -26,6 +26,10 @@
                   Analytics
                 </a>
                 {% endif %} {% if current_user.is_authenticated %}
+                <a href="http://127.0.0.1:5000/predict" class="navbar-item">
+                  Predict
+                </a>
+                {% endif %} {% if current_user.is_authenticated %}
                 <a href="{{ url_for('main.profile') }}" class="navbar-item">
                   Profile
                 </a>

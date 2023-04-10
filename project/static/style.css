@@ -1,0 +1,223 @@
+header {
+  background-color: #333;
+  height: 60px;
+  padding-bottom: 5px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 60px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.search-box {
+  margin-left: auto;
+  align-items: center;
+}
+
+.search-box input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-box button[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.fa {
+  font-size: 18px;
+}
+
+.form-content {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  background: #161616 url(images/pattern_40.gif) top left repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px 70px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4073ff;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  transform: translateY(-25px);
+  font-size: 14px;
+  color: #666;
+}
+
+input {
+  padding: 14.5px 0px 14.5px 30px;
+  border: 2px solid #ff6e40;
+  box-shadow: 0px 0px 15px #fff, 0px 0px 10px #fff, 0px 0px 15px #fff,
+    0px 0px 20px #f0f;
+  z-index: 5;
+  appearance: unset;
+  -moz-appearance: unset;
+  -webkit-appearance: unset;
+  -o-appearance: unset;
+  -ms-appearance: unset;
+  outline: none;
+  -moz-outline: none;
+  -webkit-outline: none;
+  -o-outline: none;
+  -ms-outline: none;
+  border-radius: 27.5px;
+  -o-border-radius: 27.5px;
+  -ms-border-radius: 27.5px;
+  -moz-border-radius: 27.5px;
+  -webkit-border-radius: 27.5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.select-field {
+  display: block;
+  margin: auto;
+}
+
+select {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ff6e40;
+  /* background-color: #eee; */
+  color: #333;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 27.5px;
+  -o-border-radius: 27.5px;
+  -ms-border-radius: 27.5px;
+  -moz-border-radius: 27.5px;
+  -webkit-border-radius: 27.5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 14.5px 0px 14.5px 0px;
+}
+
+.grid-item:last-child {
+  grid-column: 2 / 3;
+  /* justify-self: center; */
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  margin-top: 45px;
+  align-self: center;
+  color: white;
+  padding: 24px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  border-radius: 35px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #3e8e41; /* Dark green */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.button-container {
+  text-align: center;
+}
+
+.result {
+  display: inline;
+}
+.result-text {
+  font-size: 48px;
+  color: #000080;
+  text-shadow: -1px -1px 1px #ffffff, 1px 1px 1px #000000;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
